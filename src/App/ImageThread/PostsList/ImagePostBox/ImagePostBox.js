@@ -1,8 +1,13 @@
 import React from 'react';
 import './ImagePostBox.css';
 
-const imagePostBox = () => {
-    return <p>Image post box</p>
+const imagePostBox = (props) => {
+    return (
+        <div className="ImagePostBox">
+            <label>{props.label}</label>
+            <img alt="" src={props.src}/>
+        </div>
+    )
 }
 
 export default imagePostBox;
