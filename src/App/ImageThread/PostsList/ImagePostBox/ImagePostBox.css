@@ -1,0 +1,24 @@
+.ImagePostBox {
+    border: 1px solid black;
+    padding: 3px;
+    width: 90%;
+    margin: 5px auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+label {
+    padding: 5px;
+    margin: 5px;
+    display: block;
+}
+
+.Odd {
+    background-color: #f3f3f3;
+}
+
+.Even {
+    background-color: #c0cac0;
+}

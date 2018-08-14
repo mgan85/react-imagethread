@@ -16,6 +16,7 @@ class postsList extends React.Component{
             key={props.id}
             src={props.url}
             label={props.label}
+            id={props.id}
         />
     }
 

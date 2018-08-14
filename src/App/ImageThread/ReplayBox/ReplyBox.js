@@ -70,8 +70,7 @@ const replyBox = () => {
 
     return (
         <div className='ReplyBox'>
-            <label htmlFor="imgLabel">Image title</label>
-            <input id='imgLabel' type='text' value={this.label} onChange={onChangeLabel}/><br/>
+            <input id='imgLabel' type='text' placeholder="Image tittle" value={this.label} onChange={onChangeLabel}/><br/>
             <input id='fileInput' type='file' value={files} onChange={uploadImage}/>
             <input id='addFileButton' value='Upload Image' type='button' onClick={onClickButton}/>
         </div>

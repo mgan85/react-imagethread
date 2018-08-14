@@ -1,0 +1,29 @@
+.TopBar {
+    border: 1px solid black;
+    padding: 3px;
+    width: 50%;
+    margin: 5px auto;
+    background-color: #ccead2;
+}
+
+#postCount {
+    float: left;
+    margin: 2px;
+}
+
+#viewCount {
+    float: right;
+    margin: 2px;
+}
+
+div {
+    display: inline-block
+}
+
+#viewCount p,
+#postCount p
+{
+    font-weight: bolder;
+    margin: 0px;
+    display: initial;
+}

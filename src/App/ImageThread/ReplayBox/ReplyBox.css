@@ -1,3 +1,24 @@
 #fileInput {
     display: none;
 }
+
+.ReplyBox {
+    border: 1px solid black;
+    padding: 3px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    background-color: #d0d0d0;
+}
+
+#addFileButton {
+    padding: 5px;
+    margin: 5px;
+}
+
+#imgLabel{
+    width: 80%;
+    padding: 5px;
+    margin: 5px;
+}
