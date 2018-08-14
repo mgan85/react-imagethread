@@ -4,13 +4,14 @@ import ImagePostBox from './ImagePostBox/ImagePostBox';
 import {database} from "../../Utils/firebase";
 
 
-class postsList extends React.Component{
+class postsList extends React.Component {
     constructor() {
         super();
         this.state = {posts: []};
         this.getPosts();
     }
 
+    //Function render post
     renderPostBox = (props) => {
         return <ImagePostBox
             key={props.id}
@@ -20,10 +21,11 @@ class postsList extends React.Component{
         />
     }
 
+    //Function get all posts from db and sort them desc
     getPosts = () => {
         let self = this;
         let posts = database.ref('/Posts');
-        posts.on('value', function(snapshot) {
+        posts.on('value', function (snapshot) {
             let posts = Object.values(snapshot.val() || {});
             posts.sort(function (a, b) {
                 return b.id - a.id
@@ -33,6 +35,7 @@ class postsList extends React.Component{
         });
     }
 
+    //Function render all posts
     renderAllPostBox = () => {
         return this.state.posts.map(this.renderPostBox);
     }
@@ -42,7 +45,7 @@ class postsList extends React.Component{
             <div className="PostsList">
                 {this.renderAllPostBox()}
             </div>
-                : null;
+            : null;
 
         return (
             <div>

@@ -3,10 +3,12 @@ import './TopBar.css';
 import {database} from "../../Utils/firebase";
 
 const topBar = (props) => {
+    //Function create csv file with all post and downland this file
     let downloadPosts = () => {
         database.ref('/Posts').on('value', function (snapshot) {
             let headers = ['Title', "FileName"];
 
+            //Get all post ans sort desc
             let posts = Object.values(snapshot.val() || {});
             posts.sort(function (a, b) {
                 return b.id - a.id
