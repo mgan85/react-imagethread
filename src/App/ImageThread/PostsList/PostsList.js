@@ -38,9 +38,15 @@ class postsList extends React.Component{
     }
 
     render() {
-        return (
+        let list = this.state.posts.length > 0 ?
             <div className="PostsList">
                 {this.renderAllPostBox()}
+            </div>
+                : null;
+
+        return (
+            <div>
+                {list}
             </div>
         )
     }

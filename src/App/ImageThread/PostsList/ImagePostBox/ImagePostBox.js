@@ -3,7 +3,7 @@ import './ImagePostBox.css';
 
 const imagePostBox = (props) => {
     let cssClasses = "ImagePostBox ";
-    cssClasses +=  props.id % 2 == 0 ? "Even" : "Odd";
+    cssClasses +=  props.id % 2 === 0 ? "Even" : "Odd";
     return (
         <div className= {cssClasses}>
             <label>{props.label}</label>

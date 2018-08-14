@@ -37,13 +37,13 @@ class ImageThread extends Component {
         database.ref('/AppInfo/currentPostID')
         .on('value', function(snapshot) {
             let postsID = parseInt(snapshot.val(), 10);
-            self.setState({amountPosts: postsID-1})
+            self.setState({amountPosts: postsID})
         });
     }
 
     render() {
         return (
-            <div>
+            <div className="ImageThread">
                 <TopBar
                     views={this.state.views}
                     posts={this.state.amountPosts}/>
